@@ -1,26 +1,101 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --color-primary-900: #011A01;
+  --color-primary-800: #022601;
+  --color-primary-700: #034D02;
+  --color-primary-600: #0A7308;
+  --color-primary-500: #3FAF3A;
+  --color-neutral-100: #FFFFFF;
+  --color-neutral-200: #F2F2F0;
+  --color-neutral-300: #E0E0DD;
+  --color-neutral-400: #C6C6C2;
+  --color-neutral-500: #A8A8A5;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: 'Inter', sans-serif;
+  --font-title: 6rem;
+  --font-subtitle: 3rem;
+  --font-content: 1.1rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-size: var(--font-content);
+  background-color: var(--color-neutral-200);
+  color: var(--color-primary-800);
+  -webkit-font-smooothing: antialiased;
+}
+
+h1 {
+  font-size: var(--font-title);
+  font-weight: 600;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--font-subtitle);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+p {
+  font-size: var(--font-content);
+  line-height: 1.7;
+}
+
+.btn {
+  padding: 0.87em 2em;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  
+  border: 1px solid var(--color-primary-800);
+  border-radius: 1em;
+
+  font-family: var(--font-sans);
+  font-size: var(--font-content);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn--simple {
+  background-color: transparent;
+  color: var(--color-primary-800);
+}
+
+.btn--simple:hover:not(:disabled) {
+  background-color: var(--color-primary-800);
+  color: var(--color-neutral-200);
+  box-shadow: 0 8px 16px rgba(2, 38, 1, 0.1);
+}
+
+.btn--action {
+  background-color: var(--color-primary-800);
+  color: var(--color-neutral-200);
+}
+
+.btn--action:hover:not(:disabled) {
+  background-color: var(--color-primary-700);
+  box-shadow: 0 8px 16px rgba(2, 38, 1, 0.15);
 }
