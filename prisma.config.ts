@@ -7,6 +7,6 @@ export default defineConfig({
     path: "prisma/migrations",
   },
   datasource: {
-    url: "postgresql://anselme@localhost:5432/am_solutio_db?sslmode=disable",
+    url: process.env.DATABASE_URL!,
   },
 });

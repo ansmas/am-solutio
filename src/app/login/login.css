@@ -1,0 +1,147 @@
+.login-container{
+     width: 100%;
+     min-height: 100vh;
+
+     display: flex;
+}
+
+.login-left{
+     padding: 3em;
+
+     width: 50%;
+
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+
+     background-color: var(--color-primary-800);
+     color: var(--color-neutral-200);
+}
+
+.login-brand-name{
+     font-size: 1rem;
+     font-weight: 500;
+     letter-spacing: 0.1em;
+     text-transform: uppercase;
+     opacity: 0.7;
+}
+
+.login-hero-text p {
+     max-width: 340px;
+     
+     font-size: 1.1rem;
+     color: var(--color-neutral-400);
+}
+
+.login-right {
+  width: 50%;
+  background-color: var(--color-neutral-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3em;
+}
+
+.login-form-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form-header {
+  margin-bottom: 2.5em;
+}
+
+.login-form-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-primary-800);
+  margin-bottom: 0.4em;
+}
+
+.login-form-header p {
+  font-size: 0.95rem;
+  color: var(--color-neutral-500);
+}
+
+.login-link {
+  color: var(--color-primary-600);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.login-field label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-primary-800);
+}
+
+.login-field input {
+  padding: 0.85em 1.2em;
+  border: 1px solid var(--color-neutral-300);
+  border-radius: 0.75em;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  background-color: var(--color-neutral-100);
+  color: var(--color-primary-800);
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.login-field input:focus {
+  border-color: var(--color-primary-600);
+}
+
+.login-field input::placeholder {
+  color: var(--color-neutral-400);
+}
+
+.login-error {
+  font-size: 0.9rem;
+  color: #c0392b;
+  background-color: #fdf0ef;
+  padding: 0.75em 1em;
+  border-radius: 0.5em;
+  border: 1px solid #f5c6c2;
+}
+
+.btn {
+  width: 100%;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-left {
+    width: 100%;
+    min-height: 40vh;
+    padding: 2em;
+  }
+
+  .login-hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .login-right {
+    width: 100%;
+    padding: 2em;
+  }
+}
